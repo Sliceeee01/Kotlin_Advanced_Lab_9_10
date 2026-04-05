@@ -1,38 +1,68 @@
+import resources.OutpostResource
+import resources.ResourceManager
 //var age: Int = 18
 //    set(value) {
 //        if ((value > 0)and (value < 110))
 //            field = value
 //    }
 //
-//fun main() {
+//fun characters.example.example.resources.main() {
 //    println(age)
 //    age = 45
 //    println(age)
 //    age = -345
 //    println(age)
 //}
-data class Item(
-    val id: Int,
-    val name: String,
-    val quantity: Int
-){
-    override fun toString(): String {
-        return "Id предмета: $id\nName: $name\nКоличество: $quantity\n"
+
+//class Hero(val name: String){
+//    var health: Int = 100
+//        set(value) {
+//            field = value.coerceIn(0, 100)
+//        }
+//    var stamina : Int = 50
+//        get() = field + 10
+//    var level: Int = 1
+//        private set
+//    fun levelUp() {
+//        level++
+//        println("$name Повысил уровень до $level!")}
+//}
+
+//fun characters.example.example.resources.main() {
+//    val hero = Hero("Утер")
+//    hero.health = 150
+//    println(hero.health)
+//    println(hero.stamina)
+////    hero.level = 10
+//    hero.levelUp()
+//}
+
+abstract class  Human(val name: String){
+    abstract var age: Int
+    abstract fun hello()
+}
+
+class Person(name: String, override var age: Int): Human(name) {
+    override fun hello() {
+        println("My name is $name")
     }
 }
-
-fun main() {
-    val sword = Item(id = 1, name = "Sword", quantity = 1)
-    val betterSword = sword.copy(quantity = 2)
-    println(sword.toString())
-    println(betterSword.toString())
-
-    val swordCopy = sword.copy(quantity = sword.quantity + 1)
-    println("Копия с изменённым количеством: $swordCopy")
-
-    println("Оригинал после copy: $sword")
-
-    val (id, name, quantity) = sword
-    println("Декомпозиция: id=$id, name=$name, quantity=$quantity")
+fun main(){
+    val denis: Person = Person("Denis",20)
+    val diana: Human = Person("diana",19)
 }
 
+abstract class Figure{
+    abstract fun perimeter(): Float
+    abstract fun area(): Float
+}
+
+class Rectangle(val width: Float, val height: Float): Figure(){
+    override fun perimeter(): Float {
+        return 2 * (width + height)
+    }
+
+    override fun area(): Float {
+        return width * height
+    }
+}
