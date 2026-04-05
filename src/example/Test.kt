@@ -1,12 +1,12 @@
-import resources.OutpostResource
-import resources.ResourceManager
+package example
+
 //var age: Int = 18
 //    set(value) {
 //        if ((value > 0)and (value < 110))
 //            field = value
 //    }
 //
-//fun characters.example.example.resources.main() {
+//fun characters.example.example.resources.characters.characters.example.main() {
 //    println(age)
 //    age = 45
 //    println(age)
@@ -14,7 +14,7 @@ import resources.ResourceManager
 //    println(age)
 //}
 
-//class Hero(val name: String){
+//class characters.Hero(val name: String){
 //    var health: Int = 100
 //        set(value) {
 //            field = value.coerceIn(0, 100)
@@ -28,8 +28,8 @@ import resources.ResourceManager
 //        println("$name Повысил уровень до $level!")}
 //}
 
-//fun characters.example.example.resources.main() {
-//    val hero = Hero("Утер")
+//fun characters.example.example.resources.characters.characters.example.main() {
+//    val hero = characters.Hero("Утер")
 //    hero.health = 150
 //    println(hero.health)
 //    println(hero.stamina)

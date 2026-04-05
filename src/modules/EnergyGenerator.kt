@@ -1,7 +1,7 @@
 package modules
+
 import resources.OutpostResource
 import resources.ResourceManager
-
 
 class EnergyGenerator: OutpostModule("Генератор энергии")
 {
@@ -11,7 +11,7 @@ class EnergyGenerator: OutpostModule("Генератор энергии")
         if (energy != null){
             energy.amount += 20
         } else{
-            manager.add(OutpostResource(99,"Energy",20))
+            manager.add(OutpostResource(99, "Energy", 20))
 
         }
     }

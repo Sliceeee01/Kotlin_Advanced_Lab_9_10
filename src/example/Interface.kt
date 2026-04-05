@@ -1,6 +1,5 @@
 package example
-import resources.OutpostResource
-import resources.ResourceManager
+
 interface Movable{
     var speed: Int
     val model: String
